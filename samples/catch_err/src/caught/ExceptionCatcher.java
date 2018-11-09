@@ -5,12 +5,12 @@ import java.util.List;
 
 public class ExceptionCatcher implements UncaughtExceptionHandler {
 
+	private List<String> errList;
+
 	public ExceptionCatcher(List<String> errList) {
 		super();
 		this.errList = errList;
 	}
-
-	private List<String> errList;
 
 	@Override
 	public void uncaughtException(Thread t, Throwable e) {
